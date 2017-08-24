@@ -15,6 +15,7 @@ namespace robots_dotnet.Controllers
     {
         public IActionResult Index()
         {
+            var robotList = RobotServices.Builder();
             return View(robotList);
         }
 

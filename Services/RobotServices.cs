@@ -12,7 +12,7 @@ namespace robots_dotnet.Services
 {
     public class RobotServices
     {
-        public List<RobotModel> Builder()
+        public static List<RobotModel> Builder()
         {
             JsonSerializer serializer = new JsonSerializer();
             var robotList = new List<RobotModel>();

@@ -16,16 +16,17 @@
           }
         </div>
         <div>
-            @if(@item.Job == null)
+            @if(@Model.Job == null)
                 {
                     <p style="color: red">Available for Hire</p>
                 }else
                 {
-                    <p>@item.Job</p>
-                    <p>@item.Company</p>
+                    <p>@Model.Job</p>
+                    <p>@Model.Company</p>
                 }
         </div>
         <div>
+          <h3>Education</h3>
           <p>@Model.University</p>
         </div>
         <div>
@@ -37,6 +38,8 @@
               }
               </ul>
         </div>
+
+        <a href="/Index">Go Back to Directory</a>
 
        
           

@@ -16,12 +16,25 @@
           }
         </div>
         <div>
+            @if(@item.Job == null)
+                {
+                    <p style="color: red">Available for Hire</p>
+                }else
+                {
+                    <p>@item.Job</p>
+                    <p>@item.Company</p>
+                }
+        </div>
+        <div>
           <p>@Model.University</p>
         </div>
         <div>
           <h3>Skills</h3>
           <ul>
-              <li>@Model.Skills</li>
+              @foreach (var item in @Model.Skills)
+              {
+              <li>@item</li>
+              }
               </ul>
         </div>
 

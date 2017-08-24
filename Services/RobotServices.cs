@@ -21,10 +21,9 @@ namespace robots_dotnet.Services
             {
                 var robotReader = JsonConvert.DeserializeObject<List<RobotModel>>(reader.ReadToEnd());
                 // var data = user.Split(',');
-                Console.WriteLine(robotReader.First().Name);
 
                 return robotReader;
-            } 
+            }
         }
     }
-}
+} 

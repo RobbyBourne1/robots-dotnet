@@ -1,14 +1,23 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@{ ViewData["Title"] = "Home Page"; }
+@model List<RobotModel>
 
 
 <div class="row">
-    @model List<RobotModel>
-        @foreach (var item in Model)
+        @foreach (var item in Model) 
         {
-            <div class="col-xs-3">
-                <h1>@item.Name</h1>
+        <div class="col-xs-4">
+            <img src=@item.Avatar alt="Directory Avatar">
+            <div class="info">
+                <a href="/Profile?=@item.ID"><h2>@item.Name</h2></a>
+                @if(@item.Job == null)
+                {
+                    <p style="color: red">Available for Hire</p>
+                }else
+                {
+                    <p>@item.Job</p>
+                    <p>@item.Company</p>
+                }
             </div>
+        </div>
         }
-</div>
+ </div>

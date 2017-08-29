@@ -8,7 +8,7 @@
         <div class="col-xs-4">
             <img src=@item.Avatar alt="Directory Avatar">
             <div class="info">
-                <a href="/Profile?=@item.ID"><h2>@item.Name</h2></a>
+                <a asp-controller="Profile" asp-action="Index" asp-route-id=@item.ID><h2>@item.Name</h2></a>
                 @if(@item.Job == null)
                 {
                     <p style="color: red">Available for Hire</p>

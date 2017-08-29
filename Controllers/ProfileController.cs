@@ -16,7 +16,7 @@ namespace robots_dotnet.Controllers
         public IActionResult Index(int ID)
         {
             var robotList = RobotServices.Builder();
-            return View(robotList[ID-1]);
+            return View(robotList.SingleOrDefault(w => w.ID == ID));
         } 
     } 
 }
